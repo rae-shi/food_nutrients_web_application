@@ -1,1 +1,4 @@
 Please check the website in  https://6fee82dce2bd09.lhr.life
+developed a JavaScript application interacting with the API to fetch and display food nutrients information so that users can search detailed food components information of over 10,000 foods
+used modern JavaScript tools, such as Webpack to bundle the modules, and Babel to convert ES6, ES7 and ES8 back to ES5; classes, modules, promises, async wait, parcel, etc. were implemented in this app
+users can save search results to their favorites list via local storage, and they can easily increase or decrease food portions as per 100 grams or upload their own food nutrients information
