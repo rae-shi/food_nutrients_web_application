@@ -595,7 +595,7 @@ const init = function() {
 };
 init();
 
-},{"core-js/modules/es.regexp.flags.js":"gSXXb","core-js/modules/web.immediate.js":"49tUX","./model.js":"Y4A21","./views/foodView.js":"8Ufhm","./views/searchView.js":"9OQAM","./views/resultView.js":"f70O5","regenerator-runtime/runtime":"dXNgZ","regenerator-runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./views/paginationView.js":"6z7bi"}],"gSXXb":[function(require,module,exports) {
+},{"core-js/modules/es.regexp.flags.js":"gSXXb","core-js/modules/web.immediate.js":"49tUX","./model.js":"Y4A21","./views/foodView.js":"8Ufhm","./views/searchView.js":"9OQAM","./views/resultView.js":"f70O5","./views/paginationView.js":"6z7bi","regenerator-runtime/runtime":"dXNgZ","regenerator-runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gSXXb":[function(require,module,exports) {
 var global = require("../internals/global");
 var DESCRIPTORS = require("../internals/descriptors");
 var defineBuiltInAccessor = require("../internals/define-built-in-accessor");
