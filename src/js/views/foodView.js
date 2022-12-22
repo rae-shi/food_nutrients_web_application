@@ -11,6 +11,24 @@ export class foodView extends View {
     ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
   }
 
+  addHandlerUpdateServings(handler) {
+    this._parentElement.addEventListener('click', function (e) {
+      const btn = e.target.closest('.btn--update-servings');
+      if (!btn) return;
+      // console.log(btn);
+      const { updateTo } = btn.dataset;
+      if (+updateTo > 0) handler(+updateTo);
+    });
+  }
+
+  addHandlerAddBookmark(handler) {
+    this._parentElement.addEventListener('click', function (e) {
+      const btn = e.target.closest('.btn--bookmark');
+      if (!btn) return;
+      handler();
+    });
+  }
+
   renderMessage(message = this._message) {
     const markup = `
         <div class="message">
@@ -55,16 +73,22 @@ export class foodView extends View {
           <svg class="recipe__info-icon">
             <use href="${icons}#icon-users"></use>
           </svg>
-          <span class="recipe__info-data recipe__info-data--people">100 </span>
+          <span class="recipe__info-data recipe__info-data--people">${
+            this._data.servings
+          }</span>
           <span class="recipe__info-text">g</span>
 
           <div class="recipe__info-buttons">
-            <button class="btn--tiny btn--increase-servings">
+            <button class="btn--tiny btn--update-servings" data-update-to = "${
+              this._data.servings - 100
+            }">
               <svg>
                 <use href="${icons}#icon-minus-circle"></use>
               </svg>
             </button>
-            <button class="btn--tiny btn--increase-servings">
+            <button class="btn--tiny btn--update-servings" data-update-to = "${
+              this._data.servings + 100
+            }">
               <svg>
                 <use href="${icons}#icon-plus-circle"></use>
               </svg>
@@ -75,9 +99,11 @@ export class foodView extends View {
         <div class="recipe__user-generated">
           
         </div>
-        <button class="btn--round">
+        <button class="btn--round btn--bookmark">
           <svg class="">
-            <use href="${icons}#icon-bookmark-fill"></use>
+            <use href="${icons}#icon-bookmark${
+      this._data.bookmarked ? '-fill' : ''
+    }"></use>
           </svg>
         </button>
       </div>
@@ -108,11 +134,7 @@ export class foodView extends View {
       <div id= "FoundationFoods " class="recipe__directions">
         <h2 class="heading--2">More info</h2>
         <p class="recipe__directions-text">
-        fill sth
-          <span class="recipe__publisher">${
-            this._data.dataType
-          }</span>. Please check out
-          directions at their website.
+        More information can be checked out on U.S. DEPARTMENT OF AGRICULTURE website. Please click the button below.
         </p>
         <a
           class="btn--small recipe__btn"

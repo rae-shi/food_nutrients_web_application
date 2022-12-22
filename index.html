@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="src/sass/main.scss" />
     <script type="module" src="src/js/controller.js"></script>
 
-    <title>forkify // Search over 1,000,000 recipes</title>
+    <title>forkify // Search over 400,000 recipes</title>
   </head>
 
   <body>
@@ -24,7 +24,7 @@
           <input
             type="text"
             class="search__field"
-            placeholder="Search over 1,000,000 foods..."
+            placeholder="Search over 400,000 foods..."
           />
           <button class="btn search__btn">
             <svg class="search__icon">
@@ -39,9 +39,9 @@
             <li class="nav__item">
               <button class="nav__btn nav__btn--add-recipe">
                 <svg class="nav__icon">
-                  <use href="src/img/icons.svg#icon-edit"></use>
+                  <use></use>
                 </svg>
-                <span>Add food</span>
+                <span></span>
               </button>
             </li>
             <li class="nav__item">
@@ -263,60 +263,60 @@
         <div class="upload__column">
           <h3 class="upload__heading">Recipe data</h3>
           <label>Title</label>
-          <input value="TEST" required name="title" type="text" />
-          <label>URL</label>
-          <input value="TEST" required name="sourceUrl" type="text" />
-          <label>Image URL</label>
-          <input value="TEST" required name="image" type="text" />
-          <label>Publisher</label>
-          <input value="TEST" required name="publisher" type="text" />
-          <label>Prep time</label>
-          <input value="23" required name="cookingTime" type="number" />
+          <input value="TEST2222" required name="title" type="text" />
+          <label>DataType</label>
+          <input value="TEST2222" required name="dataType" type="text" />
+          <label>FoodID</label>
+          <input value="1750340" required name="fdcIds" type="number" />
+          <label>Img</label>
+          <input value="TEST2222" required name="img" type="text" />
+          <label>Added date</label>
+          <input value="23" required name="addedDate" type="number" />
           <label>Servings</label>
           <input value="23" required name="servings" type="number" />
         </div>
 
         <div class="upload__column">
           <h3 class="upload__heading">Ingredients</h3>
-          <label>Ingredient 1</label>
+          <label>Food nutrient 1</label>
           <input
             value="0.5,kg,Rice"
             type="text"
             required
-            name="ingredient-1"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            name="foodNutrient-1"
+            placeholder="Format: 'Amount,Unit,Description'"
           />
-          <label>Ingredient 2</label>
+          <label>Food nutrient 2</label>
           <input
             value="1,,Avocado"
             type="text"
-            name="ingredient-2"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            name="foodNutrient-2"
+            placeholder="Format: 'Amount,Unit,Description'"
           />
-          <label>Ingredient 3</label>
+          <label>Food nutrient 3</label>
           <input
             value=",,salt"
             type="text"
-            name="ingredient-3"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            name="foodNutrient-3"
+            placeholder="Format: 'Amount,Unit,Description'"
           />
-          <label>Ingredient 4</label>
+          <label>Food nutrient 4</label>
           <input
             type="text"
-            name="ingredient-4"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            name="foodNutrient-4"
+            placeholder="Format: 'Amount,Unit,Description'"
           />
-          <label>Ingredient 5</label>
+          <label>Food nutrient 5</label>
           <input
             type="text"
-            name="ingredient-5"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            name="foodNutrient-5"
+            placeholder="Format: 'Amount,Unit,Description'"
           />
-          <label>Ingredient 6</label>
+          <label>Food nutrient 6</label>
           <input
             type="text"
-            name="ingredient-6"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            name="foodNutrient-6"
+            placeholder="Format: 'Amount,Unit,Description'"
           />
         </div>
 
